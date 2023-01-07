@@ -1,0 +1,20 @@
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+    align-items: center;
+    justify-items: center;
+    
+}
+.gallery figure{
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    margin:0;
+}
+
+.gallery figure img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+}
