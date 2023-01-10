@@ -1,0 +1,1 @@
+document.getElementById("LastModified").innerHTML = document.lastModified;
