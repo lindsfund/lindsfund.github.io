@@ -16,10 +16,6 @@ function showUser() {
     user.sayHi();
 }
 
-
-
-
-
 class Month {
     constructor(month) {this.month = month;}
 
@@ -29,4 +25,28 @@ class Month {
 function showMonth(){
     let month = new Month("JAN");
     month.getMonth();
+}
+
+class Day {
+    constructor(day) {this.day = day;}
+    get day(){return this._day;}
+    set day(value){ this._day = value;}
+    getDay(){
+        alert(this.day);}
+}
+
+
+function showDay(){
+    let day = new Day("Monday");
+    day.getDay();
+}
+
+class Button {
+    constructor(value) {this.value=value;}
+    click = () => {alert(this.value);}
+}
+
+function showClick(){
+    let button = new Button("I clicked it!");
+    setTimeout(button.click,1000);
 }
