@@ -73,7 +73,6 @@ function swapTalk(grab) {
     else if (grab === 'bind') {alert ('I am ' + this.name + ' only binded.... not really though. ;) ');}
 }
 //------------------------------------------------------------------------Import/Export
-
-import {changeColor} from './changeColor.js'
+//Import at top
 changeColor();
 
