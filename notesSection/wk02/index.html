@@ -23,7 +23,12 @@
       <br>
       <div class="objectMethodThis">
         <h3>"this" Notes</h3>
-        <button onclick="me.talk()">thisFunction</button>
+        <button onclick="me.talk()">reuse 1</button>
+        <button onclick="you.talk()">reuse 2</button>
+        <button onclick="meTalk()">Binded</button>
+        <button onclick="talk.call(me)">Called</button>
+        <button onclick="swapTalk.call(me,'call')">more parameters</button>
+        <button onclick="swapTalk.call(me,'bind')">more parameters version 2</button>
       </div>
       <div class="importExport"></div>
       <h2>Image gallery</h2>

@@ -1,4 +1,4 @@
-
+//-----------------------------class
 class User {
 
     constructor(name) {
@@ -50,3 +50,25 @@ function showClick(){
     let button = new Button("I clicked it!");
     setTimeout(button.click,1000);
 }
+//------------------------------------------------------------------------ this
+function talk(){return alert('I am ' + this.name);}
+
+const me = {
+    name: 'Lindsey',
+    talk: talk
+}
+
+const you = {
+    name: 'NOT Lindsey',
+    talk: talk
+}
+
+const meTalk = talk.bind(me);
+
+
+function swapTalk(grab) {
+    if (grab === 'call') {alert ('I am ' + this.name + ' only called.');}
+    else if (grab === 'bind') {alert ('I am ' + this.name + ' only binded.... not really though. ;) ');}
+}
+
+
