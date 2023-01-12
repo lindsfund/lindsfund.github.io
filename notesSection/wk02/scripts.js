@@ -1,3 +1,5 @@
+import { changeColor } from "./changeColor";
+
 //-----------------------------class
 class User {
 
@@ -70,5 +72,8 @@ function swapTalk(grab) {
     if (grab === 'call') {alert ('I am ' + this.name + ' only called.');}
     else if (grab === 'bind') {alert ('I am ' + this.name + ' only binded.... not really though. ;) ');}
 }
+//------------------------------------------------------------------------Import/Export
 
+import {changeColor} from './changeColor.js'
+changeColor();
 

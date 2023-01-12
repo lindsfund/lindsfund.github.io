@@ -1,0 +1,33 @@
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 25px;
+    padding: 1em;
+    justify-items: left;
+    
+}
+.gallery figure{
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    margin:0;
+}
+
+.gallery figure img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+}
+
+button{
+    margin-top:10px;
+    margin-bottom: 10px;
+}
+
+#box{
+    width: 100px;
+    height: 100px;
+    background-color: pink;
+    padding: 10px;
+    border: 2px solid palevioletred;
+}
