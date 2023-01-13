@@ -1,20 +1,20 @@
-.gallery {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-gap: 25px;
-    padding: 1em;
-    justify-items: left;
-    
-}
-.gallery figure{
-    width: 100%;
-    max-width: 500px;
-    height: auto;
-    margin:0;
+
+.question {
+    margin: 20px;
+    border: 1px solid gray;
+    width: 550px;
 }
 
-.gallery figure img {
-    width: 100%;
-    max-width: 500px;
-    height: auto;
+.repBody h3 {
+    margin:0;
+    padding: 10px;
+    text-decoration: underline;
+}
+
+.repBody p {
+    margin-top:10px;
+    margin-bottom: 10px;
+    margin-left: 25px;
+    margin-right: 25px;
+    width: 500px;
 }
