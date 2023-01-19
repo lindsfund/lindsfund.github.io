@@ -73,7 +73,6 @@ const canvas2 = document.querySelector('canvas');
 const ctx2 = canvas2.getContext('2d');
 
 ctx2.fillRect(80,80,40,40);
-alert("setTimeout worked...watch for the solid square.");
  }
 
  let timerId = setTimeout(canvasTime, 5000);
