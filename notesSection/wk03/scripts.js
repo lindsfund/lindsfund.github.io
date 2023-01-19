@@ -65,4 +65,29 @@ const ctx = canvas.getContext('2d');
  ctx.lineTo(150,150);
  ctx.closePath();
  ctx.stroke();
- ctx.fillRect(80,80,40,40);
+ 
+
+ //setTimeout & setInterval
+function canvasTime(){
+const canvas2 = document.querySelector('canvas');
+const ctx2 = canvas2.getContext('2d');
+
+ctx2.fillRect(80,80,40,40);
+alert("setTimeout worked...watch for the solid square.");
+ }
+
+ let timerId = setTimeout(canvasTime, 5000);
+
+function printNumbers(from,to){
+    let end = to;
+    // for (i=from; i < end; i++ )
+    let timerId2 = setInterval( function() {
+        alert(from);
+        if (from == end) {
+            clearInterval(timerId2);
+    }   
+        from++;
+}, 500);
+}
+
+printNumbers(1,5);
