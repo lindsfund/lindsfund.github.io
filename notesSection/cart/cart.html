@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart Tutorial</title>    
+</head>
+<body>
+    <a href="index.html">Go to catalogue page</a>
+    <h1>My Cart</h1>
+    <button id="clear-cart">Clear cart</button>
+    <div id="overall-price">
+    </div>
+</body>
+<script> //retrieve items from local storage
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    let overallPrice = 0;
+    
+    if(cart.length) {
+        //for each loop calculate total price within cart array
+        cart.forEach((element ) => {
+            overallPrice += parseInt(element.price, 10);
+        });
+    }
+    
+    document.getElementById("overall-price").innerHTML = `Overall Price: $${overallPrice} USD`;
+    
+    //add event listener to clear cart
+    document.getElementById("clear-cart").addEventListener("click",() => {
+        localStorage.removeItem("cart");
+        alert("Cart is cleared!");
+    });</script>
+</html>

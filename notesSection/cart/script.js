@@ -30,21 +30,27 @@ data.forEach((element) => {
 
   // insert item to the main wrapper
   wrapper.appendChild(item);
- // return true;
+  return true;
 }); //end build and insert wrapper
 
 //add event listener
-Array.from(document.getElementsByClassName("addToCart")).forEach(
-    function(element){
-            element.addEventListener("click", (e) => {
-                //retrieve current cart if not there empty cart
-                let cart = JSON.parse(localStorage.getItem("cart")) || [];
+Array.from(document.getElementsByClassName("add-to-cart")).forEach(function (
+    element
+  ) {
+    element.addEventListener("click", (e) => {
+      // retrieve current cart if it exists. If it doesn't create an empty cart
+      let cart = JSON.parse(localStorage.getItem("cart")) || [];
+  
+      let newItem = {
+        name: e.target.dataset.name,
+        price: e.target.dataset.price,
+      };
+      cart.push(newItem);
+  
+      localStorage.setItem("cart", JSON.stringify(cart));
+    });
+  }); //end event listener
 
-                let newItem = {
-                    name: e.target.dataset.name,
-                    price: e.target.dataset.price,
-                };
-                cart.push(newItem);
-                localStorage.setItem("cart", JSON.stringify(cart));
-            });
-});
+
+
+ 
