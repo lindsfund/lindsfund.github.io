@@ -1,7 +1,7 @@
 var box = document.getElementById('box');
 
 // export function changeColor()
- function changeColor(){
+  export function changeColor(){
   if (box.style.backgroundColor == 'pink') {
     box.style.backgroundColor = 'turquoise';
     box.style.border = '2px Solid teal';
@@ -9,5 +9,10 @@ var box = document.getElementById('box');
     box.style.backgroundColor = 'pink';
     box.style.border = '2px Solid palevioletred';
   }
+  }
+
+  export function double (n){
+    return n * 2;
+  }
+
   
-}
