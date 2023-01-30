@@ -1,0 +1,51 @@
+.infoBox{
+    margin: 1rem;
+    border: 3px solid teal;
+    background-color: lightblue;
+    width: 400px;
+    padding: 10px;
+}
+.infoBox h3 {
+    margin:0px;
+}
+.infoBox li {
+    padding-left: 1.2rem;
+}
+.underText{
+    padding-left: 2rem;
+}
+.boldText{
+    font-weight: bold;
+    font-size: 1.1em;
+    text-decoration: underline;
+}
+
+.pikaImg {
+    position:fixed;
+    top:10px;
+    left: 150px;
+    width: 100px;
+}
+
+/* --------------------For the Gallery------------------------- */
+
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 25px;
+    padding: 1em;
+    justify-items: left;
+    
+}
+.gallery figure{
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    margin:0;
+}
+
+.gallery figure img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+}
