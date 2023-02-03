@@ -112,27 +112,61 @@ async function getJsonInfo() {
 
 getJsonInfo();
 
-const newUser = {
-    firstName: 'Bob',
-    lastName: 'Smith'
-};
 
-async function addJsonInfo() {
-    const urlMine = './user.json';
-    const request = new Request(urlMine, {
-        method:'POST',
-        body:JSON.stringify(newUser)
-    });
-    console.log(request.method);
-    console.log(newUser);
+//----------------------------------------------rest
 
-    let response = await fetch(urlMine);
-    console.log(response);
-
-    let result = await response.json();
-    console.log(result);
-
+function sum(a, b) {
+    return a + b;
 }
 
+function sumAll(...args//args is the name of an array
+) {
+    let sum = 0; //define return value
 
-addJsonInfo();
+    for (let arg of args) sum += arg;
+
+    return sum;
+}
+
+function showName(firstName, lastName, ...titles){
+    let fullName = firstName + " " + lastName
+    let titleList = titles.length;
+
+    // rest paramenters '...this' must be at the end
+    return fullName + ' ' + titleList;
+}
+
+//rewrite this function more dynamically next week
+function writeToHtml(obj, loc, elem, note) {
+ const location = document.getElementById(`${loc}`);
+ const element = document.createElement(`${elem}`);
+ const lineBreak = document.createElement('br');
+ const notes = `${note}`;
+
+ location.appendChild(lineBreak);
+ element.textContent = `${obj}`;
+ location.append(`${notes} ${obj}`);
+}
+writeToHtml('Rest**','restParaAndSyntax', 'p','...')
+console.log(sum(1, 2));
+writeToHtml(sum(1,3,4,5,6), 'restParaAndSyntax', 'p', 'sum of only the first two = ');
+writeToHtml(sumAll(1,4), 'restParaAndSyntax', 'p', 'sumAll with only two parameters = ');
+writeToHtml(sumAll(1,4,5,6,7,8,9), 'restParaAndSyntax', 'p', 'sumAll with 7 paramenters = ');
+writeToHtml(showName('Lindsey', 'Fund', 'wife', 'mother'),'restParaAndSyntax', 'p', 'variables and rest = ');
+
+//----------------------------------------------spread
+
+writeToHtml('Spread**','restParaAndSyntax', 'p','...');
+let arr1 = [1,4,7,9];
+let arr2 = [2,5,6,8];
+let merged = [0, ...arr1, arr2];
+let str = 'Hello';
+let jsObj = {a:1, b:2, c:3};
+let jsObjCopy = {...jsObj};
+
+writeToHtml(Math.max(...arr1), 'restParaAndSyntax', 'p','Should say 9: ');
+writeToHtml(merged, 'restParaAndSyntax', 'p', 'Should read 0,1,4,7,9,2,5,6,8: ');
+writeToHtml(Array.from(str), 'restParaAndSyntax', 'p', 'Should read H,e,l,l,o: ');
+jsObj.d = '4';
+writeToHtml(JSON.stringify(jsObj), 'restParaAndSyntax', 'p','Should NOT be the same as below: ');
+writeToHtml(JSON.stringify(jsObjCopy), 'restParaAndSyntax', 'p','Should NOT be the same as above: ');
