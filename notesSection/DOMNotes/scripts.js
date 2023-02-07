@@ -67,4 +67,46 @@ function writeHtmlToHtml (insHere, befAft, message) {
 
 }
 
-writeHtmlToHtml(mainInsert, 'afterend', '<p>This has HTML code in it and it should be at the VERY end.Huh? Why does this go above the other one?</p>')
+writeHtmlToHtml(mainInsert, 'afterend', '<p>This has HTML code in it and it should be at the VERY end.Huh? Why does this go above the other one?</p>');
+
+//build a template
+let htmlTemplate = function htmlTemplate (item) {
+    let temp = `<p> This is from a templae literal </p>
+                <h3> The first variable goes here ${item.a} </h3>
+                <h1> The seconde vriable goes here: ${item.b} </h1>`
+        return temp;
+}
+
+function createData() {
+    let item = Object.create(null); //creates empty object
+
+    item.one = htmlTemplate({
+        a: 1,
+        b: 2
+    }); //end item one
+
+    item.two = htmlTemplate({
+        a: 3,
+        b: 4
+    }); //end item two
+    return item;
+}
+
+function joinHtmlAndData(items) {
+    let joinedHtml = '';
+    Object.keys(items).forEach(key => {
+        joinedHtml += items[key];
+    }); //use += instead of .join for spead and build out before adding to DOM to lower redraws
+}
+
+//get the HTML DOM element
+let element = document.getElementById('mainInsert');
+
+//create the markup with data values
+let items = createData();
+
+//join HTML strings
+let rawHtml = joinHtmlAndData(items);
+
+//insert into the DOM
+element.insertAdjacentElement('afterend', rawHtml);
