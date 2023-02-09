@@ -1,3 +1,25 @@
+#select{
+    border-color:  blue;
+    color:blue;
+}
+#mkItBlue {
+    color: blue;
+}
+
+#selectMult {
+    border-color: green;
+    color:green;
+}
+.mkItGreen {
+    color: green;
+}
+
+#selectMult ::selection {
+background: lightgreen;
+color: green;
+}
+
+/*------------------------------------*/
 .infoBox{
     margin: 1rem;
     border: 3px solid teal;
