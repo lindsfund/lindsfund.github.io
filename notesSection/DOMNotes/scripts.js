@@ -71,14 +71,14 @@ writeHtmlToHtml(mainInsert, 'afterend', '<p>This has HTML code in it and it shou
 
 //build a template
 let htmlTemplate = function htmlTemplate (item) {
-    let temp = `<p> This is from a templae literal </p>
-                <h3> The first variable goes here ${item.a} </h3>
-                <h1> The seconde vriable goes here: ${item.b} </h1>`
+    let temp = `<p> This is from a template literal! </p>
+                <h3> The first variable goes here: ${item.a} </h3>
+                <h1> The second variable goes here: ${item.b} </h1>`
         return temp;
 }
 
 function createData() {
-    let item = Object.create(null); //creates empty object
+    const item = Object.create(null); //creates empty object
 
     item.one = htmlTemplate({
         a: 1,
@@ -94,9 +94,10 @@ function createData() {
 
 function joinHtmlAndData(items) {
     let joinedHtml = '';
-    Object.keys(items).forEach(key => {
-        joinedHtml += items[key];
+    Object.entries(items).forEach(items => {
+        joinedHtml += items;
     }); //use += instead of .join for spead and build out before adding to DOM to lower redraws
+    return joinedHtml;
 }
 
 //get the HTML DOM element
@@ -109,4 +110,4 @@ let items = createData();
 let rawHtml = joinHtmlAndData(items);
 
 //insert into the DOM
-element.insertAdjacentElement('afterend', rawHtml);
+element.insertAdjacentHTML('afterend', rawHtml);
