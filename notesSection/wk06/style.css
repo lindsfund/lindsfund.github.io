@@ -19,7 +19,17 @@ background: lightgreen;
 color: green;
 }
 
+
+
 /*------------------------------------*/
+body {
+    margin:10px;
+    max-width: 600px;
+}
+
+div{
+    margin:5px;
+}
 .infoBox{
     margin: 1rem;
     border: 3px solid teal;

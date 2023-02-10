@@ -86,11 +86,32 @@ let option = new Option('text', 'value',true,true);//creates <option value='valu
 console.log(option);
 
 
-//------------------------FORMS SUBMIT
+//------------------------FORMDATA Objects
+//event listener
+document.addEventListener('DOMContentLoaded', () => {
+  document.getElementById('formObject').addEventListener('submit', handleForm);
+});
 
-// function alertFunction(input) {
-//   alert('You clicked submit.');
-// }
+//function to handle info inside the form
+
+function handleForm(ev) {
+  ev.preventDefault(); //This wioll stop the page from relaoding *** VERY IMPORTANT***
+  console.log(ev.target);
+
+  let myForm = ev.target;
+  let fd = new FormData(formObject);
+
+  //add more things that were not in the form
+  fd.append('api-key', 'myApiKey');
+
+  //look at all the contents
+  for (let key of fd.keys()) {
+    console.log(key, fd.get(key));
+  }
+
+  //send the request with the formdata
+  
+} 
 
 
 
