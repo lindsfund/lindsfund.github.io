@@ -1,3 +1,12 @@
+nput[type="text"],
+input[type="email"],
+input[type="number"],
+textarea,
+fieldset {
+  width: 100%;
+  border: 1px solid #333;
+  box-sizing: border-box;
+}
 #select{
     border-color:  blue;
     color:blue;
@@ -19,6 +28,73 @@ background: lightgreen;
 color: green;
 }
 
+#formValidation input:invalid {
+    border: 2px dashed red;
+}
+
+#formValidation input:valid {
+    border: 2px solid black;
+}
+
+#formValidation input:invalid:required {
+    background-image: linear-gradient(to right, pink, lightgreen);
+  }
+/*-------------------------------------*/
+/* copied from video notes */
+#formDataObjects html {
+    font-size: 20px;
+    font-family: 'Monserrat', sans-serif;
+    line-height: 1.7;
+  }
+  #formDataObjects h1 {
+    font-weight: 300;
+  }
+  #formDataObjects form {
+    padding: 0 2rem;
+    margin: 1rem 0;
+    font-weight: 100;
+    font: 1em sans-serif;
+    max-width: 320px;
+  }
+  .formBox {
+    display: flex;
+    flex-direction: row;
+    margin: 1rem;
+  }
+  .formBox label {
+    flex-basis: 20ch;
+    text-align: end;
+    padding-right: 2rem;
+    padding-inline-end: 2rem;
+    font-size: 0.8rem;
+    font-weight: 100;
+    color: #444;
+  }
+  .formBox input {
+    flex-basis: auto;
+    font-size: 1rem;
+    font-weight: 100;
+    color: #333;
+    position: relative;
+    padding: 0.25rem 1rem;
+  }
+  .formBox button {
+    background-color: #4caf50;
+    border: none;
+    color: #fff;
+    padding: 0.25rem 2rem;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 100;
+    flex-basis: auto;
+    margin-left: 20ch;
+    margin-inline-start: 20ch;
+  }
+  #formDataObjects legend {
+    margin: 0 4rem;
+    padding: 0 1rem;
+    color: #4caf50;
+  }
 
 
 /*------------------------------------*/
