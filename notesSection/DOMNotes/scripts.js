@@ -24,7 +24,7 @@ function writeToHtmlNotes(obj, id, elemType, note){
 
     insHere.append(elem);
 }
-writeToHtmlNotes(sum(2, 4), 'mainInsert', 'h3','2 x 4 = ')
+writeToHtmlNotes(sum(2, 4), 'mainInsert', 'h3','2 x 4 = ');
 
 // add a class for style
 function writeToHtmlClass(obj, id, elemType, note, cls){
