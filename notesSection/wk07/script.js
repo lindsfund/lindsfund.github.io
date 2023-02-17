@@ -233,3 +233,5 @@ function curry(f) { // curry(f) does the currying transform
   notesToHtml(curriedAdvSum(1,2)(4),'currying');
   notesToHtml(curriedAdvSum(1)(2)(4),'currying');
 
+  //-----------CSS Animations
+
