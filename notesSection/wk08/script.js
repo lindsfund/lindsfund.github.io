@@ -42,6 +42,8 @@ function notesToHtml(obj, id, elemType, note, cls) {
   insHere.append(elem);
 }
 
-const test = 'This is a test.'
+const test = `I wasn't sure how to go about writing code to take notes for this subject. 
+Please click the links on this page to see the sites I visted and videos I watched to better understand 
+JWT and it's uses.`
 notesToHtml(test, 'mainBody', 'h3');
 //-----------------------------------------NOTES--------------------------------------
