@@ -152,4 +152,86 @@ clrBtn.addEventListener('click', () => {
             // to take the time between the last keyup and the current time and subtract them to get a gap
             // time. Then if that gap time is longer than a few seconds have the textarea storage value saved
             // to local storage. I didn't have time to figure that out however...maybe another day. <----
-            
+
+//-------------------------DRAWING GRAPHICS / CANVAS
+
+//set a constant to the canvas location
+const canvas = document.querySelector('.myCanvas');
+
+//this sets the canvas to the entierw width of the browser window. I dont want that so I'll comment it out.
+  // const width = canvas.width = window.innerWidth;
+  // const height = canvas.height = window.innerHeight;
+// You'll also see that we are chaining assignments together with multiple equals signs — 
+  //this is allowed in JavaScript, and it is a good technique if you want to make multiple 
+  //variables all equal to the same value.             
+
+//We need to do one final thing before we can consider our canvas template finished. To draw onto the 
+//canvas we need to get a special reference to the drawing area called a context. This is done using t
+//he HTMLCanvasElement.getContext() method, which for basic usage takes a single string as a parameter 
+//representing the type of context you want to retrieve.
+
+const ctx = canvas.getContext('2d'); //gets 2d content
+
+//fill canvas with black background
+ctx.fillStyle = 'rgb(0,0,0)';
+ctx.fillRect(0,0,320,240);
+    //the first two parameters are the coordinates of the rectangle's top left-hand corner; 
+    //the last two are the width and height you want the rectangle drawn at
+
+//red rectangle on top of the black background
+ctx.fillStyle = 'rgb(255,0,0)';
+ctx.fillRect(50,50,100,150);
+
+//green rectangle
+ctx.fillStyle = 'rgb(0,255,0)';
+ctx.fillRect(75,75,100,100);
+
+//transparent rectangle
+ctx.fillStyle = 'rgba(255,0,255,0.75)';
+ctx.fillRect(25,100,175,50);
+
+//stroke only..no fill
+ctx.strokeStyle = 'rgb(255,255,255)';
+ctx.lineWidth = 5; //change default stroke width(default = 1px)
+ctx.strokeRect(25,25,175,200);
+
+//equilateral Triangle
+
+
+//This converts degree values to radians, which is useful because whenever you need to provide 
+//an angle value in JavaScript, it will nearly always be in radians, but humans usually 
+//think in degrees.
+function degToRad(degrees) {
+  return degrees * Math.PI / 180;
+}
+
+//set color
+ctx.fillStyle = 'rgba(255,255,255,.75)';
+//begin path
+ctx.beginPath();
+ctx.moveTo(50,50);
+//add point to the path
+ctx.lineTo(150,50);
+const triHeight = 50 * Math.tan(degToRad(60));
+ctx.lineTo(100, 50 + triHeight);
+ctx.lineTo(50,50);
+//fill the path
+ctx.fill();
+
+//drawing a circle
+ctx.fillStyle = "rgb(0, 0, 255)";
+ctx.beginPath();
+//arc() takes six parameters. The first two specify the position of the arc's center 
+//(X and Y, respectively). The third is the circle's radius, the fourth and fifth are 
+//the start and end angles at which to draw the circle (so specifying 0 and 360 degrees
+//gives us a full circle), and the sixth parameter defines whether the circle should be 
+//drawn counterclockwise (anticlockwise) or clockwise (false is clockwise).
+ctx.arc(150, 106, 50, degToRad(0), degToRad(360), false);
+ctx.fill();
+
+
+ctx.fillStyle = "yellow";
+ctx.beginPath();
+ctx.arc(200, 106, 50, degToRad(-45), degToRad(45), true);
+ctx.lineTo(200, 106); //this makes it a pacman instead of flat sided circle
+ctx.fill();
