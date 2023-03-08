@@ -1,12 +1,13 @@
 /* define variables */
 :root {
     /* fonts */
-    --font-body: Arial, Helvetica, sans-serif;
-    --font-headline: 'Special Elite', cursive;
+    --font-body: Verdana, Geneva, Tahoma, sans-serif;
+    --font-headline: 'Special Elite', sans-serif;
     
     /* colors */
     --green-color: #8bbf1b;
     --orange-color: #d96e30;
+    --blue-color: #96CDD9;
     --tan-color: #d9b596;
     --brown-color: #6b4b30;
     --text-default:#26211f;
@@ -56,7 +57,7 @@ p {
 #colorGrid {
     display: grid;
     gap: .5em;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     max-width: 600px;
     margin-left: .5em;
     
@@ -82,6 +83,7 @@ p {
 }
 
 .varGrn {background-color: #8bbf1b;}
+.varBlue{background-color: #96CDD9;}
 .varOrng{background-color: #d96e30;}
 .varTan{background-color: #d9b596;}
 .varBrn{background-color: #6b4b30;}

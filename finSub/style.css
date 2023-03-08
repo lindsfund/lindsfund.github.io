@@ -1,12 +1,13 @@
 /* define variables */
 :root {
     /* fonts */
-    --font-body: Arial, Helvetica, sans-serif;
+    --font-body: Verdana, Geneva, Tahoma, sans-serif;
     --font-headline: 'Special Elite', sans-serif;
     
     /* colors */
     --green-color: #8bbf1b;
     --orange-color: #d96e30;
+    --blue-color: #96CDD9;
     --tan-color: #d9b596;
     --brown-color: #6b4b30;
     --text-default:#26211f;
@@ -58,7 +59,7 @@ p {
 /*----HEADER and FOOTER----*/
 #mainHeader {
     padding-top: .5em;
-    background-color: var(--tan-color);
+    background-color: var(--blue-color);
     border-bottom: 2px solid var(--green-color);
 }
 
@@ -79,6 +80,7 @@ button {
     padding: 2em;
     padding-bottom: .25em;
     background-color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 
 }
 
