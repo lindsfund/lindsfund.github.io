@@ -78,7 +78,7 @@ p {
     border: 1px solid lightgray;
     border-radius: 0px 0px 10px 10px;
     text-align: right;
-    padding-right: 2px;
+    padding: .25em;
 }
 
 .varGrn {background-color: #8bbf1b;}
