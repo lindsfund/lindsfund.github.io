@@ -14,10 +14,6 @@
     --light-grey: #d0d0d0;
     --dark-grey: #303030;
   
-    /* sizes */
-    --font-base: 16px;
-    --small-font: 0.8em;
-    --large-font: 1.2em;
 }
 
 * {
@@ -29,7 +25,8 @@ body {
     height: 100%;
     color: var(--text-default);   
 }
-/* DEFAULT REBUILD*/
+
+/*---------- ELEMENT DEFUALTS ----------*/
 h1 {
     margin:0px;
     font-family: var(--font-headline);
@@ -73,12 +70,48 @@ button {
     padding: 3em;
 }
 
+/*---------- FORMS DEFUALT -----------*/
+
+form {
+    max-width: 500px;
+    grid-column-end: span 3;
+    grid-row-end: span 5;
+    margin: 0 auto;
+}
+
+
+fieldset {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: .5em;
+    padding: 1em;
+    border: 2px solid var(--text-default);
+    border-radius: 5px;
+    margin-bottom: 1em;
+}
+
+label {
+    display: block;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    white-space: nowrap;
+}
+
+input {
+    width: 100%;
+    border: 2px solid var(--text-default);
+    border-radius: 5px;
+}
 
 /*----------HEADER----------*/
 #mainHeader {
     padding-top: .5em;
     background-color: var(--blue-color);
     border-bottom: 2px solid var(--green-color);
+}
+
+#mainHeader a {
+    color: var(--text-default);
+    text-decoration: none;
 }
 
 #hdrImg {
@@ -91,10 +124,17 @@ button {
     bottom: .1rem;
     right: .5rem;
 }
+
+
 /*----------FOOTER----------*/
 #mainFooter {
     max-width: 500px;
     margin: 0 auto;
+}
+
+#mainFooter a {
+    color: var(--text-default);
+    text-decoration: none;
 }
 
 .footPanel {
@@ -147,3 +187,4 @@ img {
     background-color: magenta;
     text-align: center;
 }
+

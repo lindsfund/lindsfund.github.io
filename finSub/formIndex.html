@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+
+    <title>Seed Database</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header id="mainHeader"></header>
+    <main id="mainBody">
+       <form action="addNewSeed">
+        <fieldset>
+            <legend>Seed Packet Information</legend>
+            <label for="snum">Number:</label>
+            <input type="text" name="snum" id="snum">
+            <label for="sname">Name:</label>
+            <input type="text" id="sname" name="sname" required>
+            <label for="culti">Cultivar:</label>
+            <input type="text" name="culti" id="culti">
+            <label for="brand">Brand:</label>
+            <input type="text" name="brand" id="brand">
+            <label for="category">Category:</label>
+            <input type="text" name="category" id="category">
+        </fieldset>
+        <fieldset>
+            <legend>Seed Care Inforamtion</legend>
+            <label for="ftemp">Temperature:</label>
+            <input type="text" name="ftemp" id="ftemp">
+            <label for="frstHrdy">Frost hardy:</label>
+            <input type="text" name="frstHrdy" id="frstHrdy">
+            <label for="plntDpth">Plant Depth:</label>
+            <input type="text" name="plntDpth" id="plntDpth">
+            <label for="dysToSprt">Sprout Time:</label>
+            <input type="text" name="dysToSprt" id="dysToSprt">
+        </fieldset>
+        <fieldset>
+            <legend>Plant Care Information</legend>
+            <label for="hrsSun">Sunlight:</label>
+            <input type="text" name="hrsSun" id="hrsSun">
+            <label for="inSpc">Plant Spacing:</label>
+            <input type="text" name="inSpc" id="inSpc">
+        </fieldset>
+        <button type="submit">submit</button>
+       </form>
+    </main>
+    <footer id="mainFooter"> </footer>
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>
