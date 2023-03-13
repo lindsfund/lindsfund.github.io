@@ -51,6 +51,7 @@ function pickStation(stations, locElevation) {
      console.log(array);
      let sml = Math.min(...array);
 
+     
     
 }
 pickStation(stations,locElevation);
