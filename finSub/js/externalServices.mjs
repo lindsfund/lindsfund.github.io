@@ -1,6 +1,6 @@
 
-
-async function convertToJSON(res) {
+//convert data to JSON
+export async function convertToJSON(res) {
     const data = await res.json();
     if (res.ok){
         return data;

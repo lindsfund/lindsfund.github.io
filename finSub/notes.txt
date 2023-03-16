@@ -1,0 +1,9 @@
+const zip = 22554;
+const locElevation = 220;
+
+const owAPIkey = `bb3a4338529ff49a475fac98f7e5cc42`;
+const owURL = `https://api.openweathermap.org`;
+const geoCode = `/geo/1.0/zip?zip=${zip},US&appid=${owAPIkey}`
+
+
+const fsURL = `https://api.farmsense.net/v1/frostdates`;
