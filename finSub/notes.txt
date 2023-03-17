@@ -1,9 +1,15 @@
+//THESE ARE THE TES VARIABLES THAT WILL NEED TO BE DYNAMIC
 const zip = 22554;
 const locElevation = 220;
+const statID = 442009;
+const seasNum = 1;
 
+// THIS IS FOR THE WEATHER API
 const owAPIkey = `bb3a4338529ff49a475fac98f7e5cc42`;
 const owURL = `https://api.openweathermap.org`;
 const geoCode = `/geo/1.0/zip?zip=${zip},US&appid=${owAPIkey}`
 
-
+// THIS IS FOR FARMSENCE API
 const fsURL = `https://api.farmsense.net/v1/frostdates`;
+const findStation = `/stations/?lat=${lat}&lon=${lon}`;
+const findProb = `/probabilities/?station=${statID}&season=${seasNum}`;

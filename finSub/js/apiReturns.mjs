@@ -1,9 +1,8 @@
 import { returnAPI } from "./externalServices.mjs";
 
 
-//these will need to be filled from the HTML form
-const locElevation = 220;
-const zip = 22554;
+//---these will need to be dynamic
+const zip = 50595; //looking for rain
 
 // needed constants for API calls
 const owAPIkey = `bb3a4338529ff49a475fac98f7e5cc42`;
@@ -30,19 +29,11 @@ const lon = location.lon;
 const wthrMain = `/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${owAPIkey}`;
 
 
-export async function getWeather(lat,lon) {
+export async function getWeatherData(lat,lon) {
     const weather = await returnAPI(owURL, wthrMain);
     return weather;
 }
 
-//console.log(await getWeather());
-
-//get all the weather info from the API
-const weather = await getWeather();
-console.log(weather);
-
-const weatherMain = weather.main;
-console.log(weatherMain);
 
 //-----------get light informtion from weather API???
 
@@ -54,14 +45,25 @@ export async function getStationList(lat, lon){
     const stations = await returnAPI(fsURL,findStation);
     return stations;
 }
-//console.log(await getStationList());
-const stationsList = await getStationList();
-console.log(stationsList);
+
+
+//pick station
+export async function pickStation() {
+    //get the station list
+    const stationsList = await getStationList();
+
+    //pick a station (---could be dynamic)
+    const station = stationsList[0].id;
+     
+
+    return station;
+}
 
 //get probabilities with station from fsAPI
 
-//will need to be dynamic
-const statID = 442009;
+//---will need to be dynamic
+const statID = await pickStation();
+// console.log(statID);
 const seasNum = 1;
 
 const findProb = `/probabilities/?station=${statID}&season=${seasNum}`;
@@ -71,7 +73,6 @@ export async function getProbilities(statID,seasNum){
     return probabilities;
 }
 
-const probList = await getProbilities();
-console.log(probList);
+
 
  

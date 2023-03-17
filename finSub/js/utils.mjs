@@ -26,8 +26,3 @@ export function renderObjTemplate(template, prntElem, data, callback) {
     prntElem.insertAdjacentHTML('afterbegin', template);
 } 
 
-//function to convert kelvin to fahrenheit
-export function kelToFah(degKel) {
-    let farh = ((degKel-273.15)*1.8)+32;
-    return farh;
-}
