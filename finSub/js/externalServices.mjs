@@ -17,4 +17,11 @@ export async function convertToJSON(res) {
         return data;
     }
 
+export async function returnJSON(path) {
+    const response = await fetch(path);
+            //console.log(response);
+    const data = await convertToJSON(response);
+            //console.log(data);
+    return data;
+}
  
