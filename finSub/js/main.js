@@ -19,8 +19,9 @@ const frostDate = await getFrostDate();
 
 //get weather data
 const weather = new WeatherData();
-const finWeather = weather.init(weather);
-        console.log(finWeather);
+const displayWeather = weather.renderInDom('#wkWeather');
+
+
 
 //get seed info
 const seeds = new Seeds();

@@ -23,7 +23,6 @@ console.log(seedsArr);
                 // const lowTemp = weather.main.temp_min;
                 // const precip = weather.weather[0].main;
 
-
 export default class Seeds {
     constructor() {
         this.seedPacket_id = seedPacket_id;

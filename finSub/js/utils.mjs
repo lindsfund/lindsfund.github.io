@@ -26,3 +26,7 @@ export function renderObjTemplate(template, prntElem, data, callback) {
     prntElem.insertAdjacentHTML('afterbegin', template);
 } 
 
+//get an element from the DOM
+export function getElement(selector, parent = document) {
+    return parent.querySelector(selector);
+}
