@@ -2,7 +2,7 @@ import { returnAPI } from "./externalServices.mjs";
 
 
 //---these will need to be dynamic
-const zip = 50595; //looking for rain
+const zip = 22554; //looking for rain
 
 // needed constants for API calls
 const owAPIkey = `bb3a4338529ff49a475fac98f7e5cc42`;

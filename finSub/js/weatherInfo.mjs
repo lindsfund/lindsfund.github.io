@@ -58,15 +58,13 @@ export default class WeatherData {
         return f;
     }
 
-    renderInDom(selector ) {
+    renderInDom(selector) {
         
         //grab the element
         let element = getElement(selector);
         
         //collect rounded data
         let rounded = this.init(this);
-        console.log(rounded.currentTemp);
-        
 
         //insert data into template.
         element.insertAdjacentHTML('afterBegin', weatherTemplate(rounded));

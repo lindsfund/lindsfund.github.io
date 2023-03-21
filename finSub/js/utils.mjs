@@ -30,3 +30,24 @@ export function renderObjTemplate(template, prntElem, data, callback) {
 export function getElement(selector, parent = document) {
     return parent.querySelector(selector);
 }
+
+
+//get month name
+export function getMonthName(number) {
+    const date = new Date();
+    date.setMonth(number - 1);
+
+    return date.toLocaleString('en-US', { month: 'long' });
+}
+
+//render info in the DOM
+export function showInDom(selector, data){
+    //grab element
+    const element = getElement(selector);
+
+    //collect data to show
+    const showThis = `${data}`;
+
+    //insert data into DOM
+    element.insertAdjacentHTML('afterBegin', showThis);
+}
