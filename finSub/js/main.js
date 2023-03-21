@@ -1,11 +1,10 @@
 import { loadHeaderFooter, showInDom} from "./utils.mjs";
 import {frostDateTemplate, getFrostDate } from "./frostDate.mjs";
 import WeatherData from "./weatherInfo.mjs";
-import Seeds from "./fromJson.mjs";
+import {returnSeedsJson} from "./fromJson.mjs";
 import {pickStation } from "./apiReturns.mjs";
 
 loadHeaderFooter();
-
 
 //get location info
 // const station = await pickStation();
@@ -24,7 +23,8 @@ const displayFrostDate = showInDom('#frostDt', frostDateTemplate(frostDate));
 
 
 //get seed info
-const seeds = new Seeds();
+const seeds = returnSeedsJson();
+console.log(seeds);
 
 
 
