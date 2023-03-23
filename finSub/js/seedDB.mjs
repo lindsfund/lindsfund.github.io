@@ -1,5 +1,5 @@
 
-import { returnItems, returnSeedsJson } from "./fromJson.mjs";
+import { returnSimplifiedJSON, returnSeedsJson} from "./fromJson.mjs";
 
 //get the info from the JSON
 const seeds = await returnSeedsJson();
@@ -24,16 +24,31 @@ function seedDisplayTemplate(data) {
 export default class Seeds {
     //constuctor
 constructor() {
-    this.seed = {};
+    
+    this.seedPacket_id = 0;
+    this.brand_id = 0;
+    this.category_id = 0;
+    this.name = '';
+    this.cultivar = '';
 }
     //inititalize
    async init(){
-    console.log(this);
+    //get info from JSON
     const seeds = await returnSeedsJson();
     console.log(seeds);
-    const seed = Object.create(seeds);
+
+    //simplify for search
+    const seed = returnSimplifiedJSON(seeds);
     console.log(seed);
-   
+
+    // for every seed packet make a new seed object
+    seed.forEach(obj => {
+        console.log(this);
+        console.log(obj);
+        
+    }); 
+    
+    
     }
 
     //filters

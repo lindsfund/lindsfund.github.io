@@ -11,12 +11,16 @@ export async function returnSeedsJson() {
     return seedsData;
 }
 
-export function returnItems(items){
+export function returnSimplifiedJSON(items){
     const response = items.map((item) => 
         { //console.log(item);
         
         return {
-            seed_id: item.seedPacket_id,
+            seedPacket_id: item.seedPacket_id,
+            brand_id: item.brand_id,
+            category_id: item.category_id,
+            name: item.name,
+            cultivar: item.cultivar,
         };
     });
     return response;
