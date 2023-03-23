@@ -40,7 +40,7 @@ export function getMonthName(number) {
     return date.toLocaleString('en-US', { month: 'long' });
 }
 
-//render info in the DOM
+//render info in the DOM *ONE W/OUT temp*
 export function showInDom(selector, data){
     //grab element
     const element = getElement(selector);
@@ -51,3 +51,4 @@ export function showInDom(selector, data){
     //insert data into DOM
     element.insertAdjacentHTML('afterBegin', showThis);
 }
+

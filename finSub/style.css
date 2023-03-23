@@ -188,3 +188,18 @@ img {
     text-align: center;
 }
 
+.seedCardsContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-end: span 2;
+    gap: 1rem;
+    
+}
+
+.seedCardElem {
+    border: 2px solid black;
+    max-width: 250px;
+    min-width: 100px;
+    text-align: center;
+}
+
