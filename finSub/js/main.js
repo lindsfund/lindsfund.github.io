@@ -2,7 +2,7 @@ import { getElement, loadHeaderFooter, showInDom} from "./utils.mjs";
 import {frostDateTemplate, getFrostDate } from "./frostDate.mjs";
 import WeatherData from "./weatherInfo.mjs";
 import Seeds from "./seedDB.mjs";
-// import {returnItems, returnSeedsJson} from "./fromJson.mjs";
+import {returnSeedsJson} from "./fromJson.mjs";
 import {pickStation } from "./apiReturns.mjs";
 
 loadHeaderFooter();
@@ -24,10 +24,14 @@ loadHeaderFooter();
 
 
 //get seed info
+const seeds = await returnSeedsJson();
+        console.log(seeds);
 const seedsClass = new Seeds();
-seedsClass.init();
 
-console.log(seedsClass);
+seedsClass.init(seeds);
+
+
+       
 
 
 
