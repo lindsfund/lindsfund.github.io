@@ -8,9 +8,9 @@ const weather = await getWeatherData();
 function weatherTemplate(data){
     return `<div class="qtrSecElem">
     <h2>Today's Weather</h2>
-    <div class="wthrElem">${data.currentTemp}</div>
-    <div class="wthrElem">${data.highTemp}/${data.lowTemp}</div>
-    <div class="wthrElem">${data.precip}</div>
+    <p class="wthrElem">Current Temp: ${data.currentTemp}F</p>
+    <p class="wthrElem">High: ${data.highTemp}F / Low: ${data.lowTemp}F</p>
+    <p class="wthrElem">Conditions: ${data.precip}</p>
 </div>`
 }
         
