@@ -15,13 +15,13 @@
 <body>
     <header id="mainHeader"></header>
     <main id="mainBody">
-       <form action="addNewSeed">
+       <form name="seedInput" id= "seedInput" action="addNewSeed">
         <fieldset>
             <legend>Seed Packet Information</legend>
             <label for="snum">Number:</label>
             <input type="text" name="snum" id="snum">
             <label for="sname">Name:</label>
-            <input type="text" id="sname" name="sname" required>
+            <input type="text" id="sname" name="sname" value="TEST"required>
             <label for="culti">Cultivar:</label>
             <input type="text" name="culti" id="culti">
             <label for="brand">Brand:</label>
@@ -51,6 +51,6 @@
        </form>
     </main>
     <footer id="mainFooter"> </footer>
-    <script type="module" src="js/main.js"></script>
+    <script type="module" src="js/forms.mjs"></script>
 </body>
 </html>

@@ -52,3 +52,7 @@ export function showInDom(selector, data){
     element.insertAdjacentHTML('afterBegin', showThis);
 }
 
+//set local Storage
+export function setLocalStorage(key, data) {
+    localStorage.setItem(key, JSON.stringify(data));
+}

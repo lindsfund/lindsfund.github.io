@@ -12,11 +12,11 @@ loadHeaderFooter();
 
 //get weather data
 const weather = new WeatherData();
-const displayWeather = weather.renderInDom('#wkWeather');
+weather.renderInDom('#wkWeather');
 
 // get frostDate
 const frostDate = await getFrostDate();
-const displayFrostDate = showInDom('#frostDt', frostDateTemplate(frostDate));
+showInDom('#frostDt', frostDateTemplate(frostDate));
 
 
 
