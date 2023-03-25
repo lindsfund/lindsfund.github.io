@@ -26,7 +26,7 @@ function selectCategory(){
 
     //use selected to filter
     const categoryArr = filterByCategory(seedArr, changedText.innerHTML);
-            //console.log(categoryArr);
+            console.log(categoryArr);
 
     //are there seeds in this category
     if(categoryArr != ''){
@@ -44,5 +44,7 @@ function selectCategory(){
 }
 
 document.getElementById('category').onchange = selectCategory;
+
+//when card is clicked send it to localStorage for processing into the garden plan
 
 

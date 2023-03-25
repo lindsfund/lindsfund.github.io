@@ -58,8 +58,6 @@ export function setLocalStorage(key, data) {
 }
 
 //function to filer array by category
-export function filterByCategory(array, _category){
-    
+export function filterByCategory(array, _category){ 
     return array.filter((obj) => obj.category_id == _category);
-
 }

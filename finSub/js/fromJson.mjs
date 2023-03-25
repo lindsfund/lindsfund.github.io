@@ -13,8 +13,7 @@ export async function returnSeedsJson() {
 
 export function returnSimplifiedJSON(items){
     const response = items.map((item) => 
-        { //console.log(item);
-        
+        { 
         return {
             seedPacket_id: item.seedPacket_id,
             brand_id: item.brand_id,
