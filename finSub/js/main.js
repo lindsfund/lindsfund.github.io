@@ -1,4 +1,4 @@
-import { getElement, loadHeaderFooter, showInDom} from "./utils.mjs";
+import {loadHeaderFooter, showInDom} from "./utils.mjs";
 import {frostDateTemplate, getFrostDate } from "./frostDate.mjs";
 import WeatherData from "./weatherInfo.mjs";
 import {returnSeedsJson} from "./fromJson.mjs";

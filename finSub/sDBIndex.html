@@ -16,9 +16,22 @@
     <header id="mainHeader"></header>
     <main id="mainBody">
         <div class="fullWdthContainer">
-            <div class="fullWdthElem">
-                <p>Choose a category of plant</p>
-            </div>
+            <form action="chooseCategory" id="sltCategory">
+                <label for="category">Choose a category:</label>
+                <select name="category" id="category">
+                    <option value=" "selected> </option>
+                    <option value="herbs">Herbs</option>
+                    <option value="leafyVeg">Leafy Vegetables</option>
+                    <option value="peas">Peas</option>
+                    <option value="beans">Beans</option>
+                    <option value="medicinal">Medicinal</option>
+                    <option value="flowers">Flowers</option>
+                    <option value="squash">Squash</option>
+                    <option value="tomato">Tomatoes</option>
+                    <option value="other">Other</option>
+                </select>
+                <p>Category: <span id="changed"></span></p>
+            </form>
         </div>
 
         <div class="fullWdthContainer">
@@ -39,6 +52,6 @@
         </div>
     </main>
     <footer id="mainFooter"> </footer>
-    <script type="module" src="js/main.js"></script>
+    <script type="module" src="js/seedDB.mjs"></script>
 </body>
 </html>
