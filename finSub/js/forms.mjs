@@ -35,13 +35,15 @@ function handleFormSubmit(ev){
     });
     console.log(req);
 
-    fetch(req)
-    .then((res) => res.json())
-    .then((data) => {
-        console.log(`Response from server`);
-        console.log(data);
-    })
-    .catch(console.warn);
+    
+    //NO SERVER>>THIS WON"T WORK
+    // fetch(req)
+    // .then((res) => res.json())
+    // .then((data) => {
+    //     console.log(`Response from server`);
+    //     console.log(data);
+    // })
+    // .catch(console.warn);
 }
 
 function convertFD2JSON(formData) {

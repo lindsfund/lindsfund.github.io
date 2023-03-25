@@ -5,10 +5,11 @@ loadHeaderFooter();
 
 function displaySeed(seed){
     return `<div class="seedCardElem">
-    <p>${seed.seedPacket_id}</p>
-    <p>${seed.brand_id}</p>
-    <p>${seed.name}</p>
-    <p>${seed.cultivar}</p>
+    <h3>Seed Type: <br> <span>${seed.name}</span></h3>
+    <p>Cultivar: ${seed.cultivar}</p>
+    <p>seed Id: ${seed.seedPacket_id}</p>
+    <p>Brand Id:${seed.brand_id}</p>
+    
     <!-- plantedbefore? -->
 </div>`
 }
@@ -19,6 +20,7 @@ const seedArr = await returnSeedsJson();
 //eventListener for category drop down
 let changedText = document.getElementById('changed');
 
+//do this when there is a change
 function selectCategory(){
     changedText.textContent = this.value;
 
