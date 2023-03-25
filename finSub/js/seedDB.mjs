@@ -1,30 +1,46 @@
 import { returnSeedsJson } from "./fromJson.mjs";
+import { loadHeaderFooter, showInDom,filterByCategory } from "./utils.mjs";
 
+loadHeaderFooter();
 
+function displaySeed(seed){
+    return `<div class="seedCardElem">
+    <p>${seed.seedPacket_id}</p>
+    <p>${seed.brand_id}</p>
+    <p>${seed.name}</p>
+    <p>${seed.cultivar}</p>
+    <!-- plantedbefore? -->
+</div>`
+}
 //get array of seeds from JSON
 const seedArr = await returnSeedsJson();
-console.log(seedArr);
-
-//function to filer array by category
-function filterByCategory(array, _category){
-    return array.filter((obj) => obj.category_id === _category);
-
-}
-console.log(filterByCategory(seedArr, 2));
-
-//function to filter by variety
-function fileterByVarierty(array, _name){
-    return array.filter((obj) => obj.name === _name);
-}
-
-console.log(fileterByVarierty(seedArr, 'Lettuce'));
+        //console.log(seedArr);
 
 //eventListener for category drop down
-let categorySelector = '',
-changedText = document.getElementById('changed');
+let changedText = document.getElementById('changed');
 
-function selectValue(){
+function selectCategory(){
     changedText.textContent = this.value;
+
+    //use selected to filter
+    const categoryArr = filterByCategory(seedArr, changedText.innerHTML);
+            //console.log(categoryArr);
+
+    //are there seeds in this category
+    if(categoryArr != ''){
+        //display selected category's seeds 
+        categoryArr.forEach((obj) => {
+            showInDom('.seedCardsContainer', displaySeed(obj));           
+        });   
+    } else {
+        //set display to empty 
+        const element = document.querySelector('.seedCardsContainer');
+        while (element.hasChildNodes()) {
+            element.removeChild(element.firstChild);
+        }
+    }
 }
 
-document.getElementById('category').onchange = selectValue;
+document.getElementById('category').onchange = selectCategory;
+
+

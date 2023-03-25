@@ -15,39 +15,26 @@
 <body>
     <header id="mainHeader"></header>
     <main id="mainBody">
-        <div class="fullWdthContainer">
+        <div >
             <form action="chooseCategory" id="sltCategory">
                 <label for="category">Choose a category:</label>
                 <select name="category" id="category">
-                    <option value=" "selected> </option>
-                    <option value="herbs">Herbs</option>
-                    <option value="leafyVeg">Leafy Vegetables</option>
-                    <option value="peas">Peas</option>
-                    <option value="beans">Beans</option>
-                    <option value="medicinal">Medicinal</option>
-                    <option value="flowers">Flowers</option>
-                    <option value="squash">Squash</option>
-                    <option value="tomato">Tomatoes</option>
-                    <option value="other">Other</option>
+                    <option value="0" selected> </option>
+                    <option value="1">Herbs</option>
+                    <option value="2">Leafy Vegetables</option>
+                    <option value="3">Peas</option>
+                    <option value="4">Beans</option>
+                    <option value="5">Medicinal</option>
+                    <option value="6">Flowers</option>
+                    <option value="7">Squash</option>
+                    <option value="8">Tomatoes</option>
+                    <option value="9">Other</option>
                 </select>
                 <p>Category: <span id="changed"></span></p>
             </form>
         </div>
-
-        <div class="fullWdthContainer">
-            <div class="fullWdthElem">
-                <p>Choose a variety from that category</p>
-            </div>
-        </div>
-
             <div class="seedCardsContainer">
-                <div class="seedCardElem">
-                    <p>${seedPacket_id}</p>
-                    <p>${brand_id}</p>
-                    <p>${name}</p>
-                    <p>${cultivar}</p>
-                    <!-- plantedbefore? -->
-                </div>
+                
             </div>
         </div>
     </main>

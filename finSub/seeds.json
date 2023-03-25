@@ -13,6 +13,32 @@
 		"brand_id" : 1
 	},
 	{
+		"seedPacket_id" : 2,
+		"name" : "Basil",
+		"cultivar" : "Emily",
+		"fTemp" : "65-90",
+		"plantDepth" : "0.25",
+		"frstHardy" : "no",
+		"hrsSunlight" : "8-12",
+		"inSpaced" : "8-12",
+		"dysToSprout" : "6-10",
+		"category_id" : 1,
+		"brand_id" : 1
+	},
+	{
+		"seedPacket_id" : 3,
+		"name" : "Thyme",
+		"cultivar" : null,
+		"fTemp" : "70",
+		"plantDepth" : "surface",
+		"frstHardy" : "yes",
+		"hrsSunlight" : "8-12",
+		"inSpaced" : "9",
+		"dysToSprout" : "14-28",
+		"category_id" : 1,
+		"brand_id" : 1
+	},
+	{
 		"seedPacket_id" : 4,
 		"name" : "Rosemary",
 		"cultivar" : null,
@@ -39,6 +65,32 @@
 		"brand_id" : 1
 	},
 	{
+		"seedPacket_id" : 6,
+		"name" : "Sage",
+		"cultivar" : "Siriu Blue",
+		"fTemp" : "60-90",
+		"plantDepth" : "0.25",
+		"frstHardy" : "yes",
+		"hrsSunlight" : "8-12",
+		"inSpaced" : "12",
+		"dysToSprout" : "10-30",
+		"category_id" : 1,
+		"brand_id" : 1
+	},
+	{
+		"seedPacket_id" : 7,
+		"name" : "Spinach",
+		"cultivar" : "Bloomsdale Long Standing",
+		"fTemp" : null,
+		"plantDepth" : "0.5",
+		"frstHardy" : null,
+		"hrsSunlight" : null,
+		"inSpaced" : "6-12",
+		"dysToSprout" : "8-10",
+		"category_id" : 2,
+		"brand_id" : 3
+	},
+	{
 		"seedPacket_id" : 8,
 		"name" : "Kale",
 		"cultivar" : "Tronchuda",
@@ -49,6 +101,19 @@
 		"inSpaced" : "12-18",
 		"dysToSprout" : "6-9",
 		"category_id" : 2,
+		"brand_id" : 1
+	},
+	{
+		"seedPacket_id" : 9,
+		"name" : "Sweet Peppers",
+		"cultivar" : "California Wonder",
+		"fTemp" : "70-95",
+		"plantDepth" : "0.25",
+		"frstHardy" : "no",
+		"hrsSunlight" : "8-12",
+		"inSpaced" : "18",
+		"dysToSprout" : "7-10",
+		"category_id" : 9,
 		"brand_id" : 1
 	},
 	{
@@ -75,6 +140,58 @@
 		"inSpaced" : "2-4",
 		"dysToSprout" : "7-10",
 		"category_id" : 2,
+		"brand_id" : 1
+	},
+	{
+		"seedPacket_id" : 12,
+		"name" : "Tomato",
+		"cultivar" : "Bonny Best",
+		"fTemp" : "75-95",
+		"plantDepth" : "0.125",
+		"frstHardy" : "no",
+		"hrsSunlight" : "8-12",
+		"inSpaced" : "24",
+		"dysToSprout" : "7-14",
+		"category_id" : 8,
+		"brand_id" : 1
+	},
+	{
+		"seedPacket_id" : 13,
+		"name" : "Tomato",
+		"cultivar" : "Chadwick Cherry",
+		"fTemp" : "75-95",
+		"plantDepth" : "0.125",
+		"frstHardy" : "no",
+		"hrsSunlight" : "8-12",
+		"inSpaced" : "24",
+		"dysToSprout" : "7-14",
+		"category_id" : 8,
+		"brand_id" : 1
+	},
+	{
+		"seedPacket_id" : 14,
+		"name" : "Tomato",
+		"cultivar" : "Sunrise Bumblebee",
+		"fTemp" : "75-95",
+		"plantDepth" : "0.125",
+		"frstHardy" : "no",
+		"hrsSunlight" : "8-12",
+		"inSpaced" : "24",
+		"dysToSprout" : "7-14",
+		"category_id" : 8,
+		"brand_id" : 1
+	},
+	{
+		"seedPacket_id" : 15,
+		"name" : "Tomato",
+		"cultivar" : "Yellow Pear",
+		"fTemp" : "75-95",
+		"plantDepth" : "0.125",
+		"frstHardy" : "no",
+		"hrsSunlight" : "8-12",
+		"inSpaced" : "24",
+		"dysToSprout" : "7-14",
+		"category_id" : 8,
 		"brand_id" : 1
 	},
 	{
@@ -128,6 +245,19 @@
 		"dysToSprout" : "14-21",
 		"category_id" : 5,
 		"brand_id" : 1
+	},
+	{
+		"seedPacket_id" : 20,
+		"name" : "Oregano",
+		"cultivar" : "Vulgare",
+		"fTemp" : null,
+		"plantDepth" : "0.125",
+		"frstHardy" : null,
+		"hrsSunlight" : null,
+		"inSpaced" : "12",
+		"dysToSprout" : "8-14",
+		"category_id" : 1,
+		"brand_id" : 3
 	},
 	{
 		"seedPacket_id" : 21,
@@ -219,6 +349,84 @@
 		"dysToSprout" : "7-21",
 		"category_id" : 5,
 		"brand_id" : 6
+	},
+	{
+		"seedPacket_id" : 33,
+		"name" : "Flower",
+		"cultivar" : "Morning Glory",
+		"fTemp" : "warm",
+		"plantDepth" : "0.25",
+		"frstHardy" : null,
+		"hrsSunlight" : "8-12",
+		"inSpaced" : "6",
+		"dysToSprout" : "10",
+		"category_id" : 6,
+		"brand_id" : 3
+	},
+	{
+		"seedPacket_id" : 34,
+		"name" : "Flower",
+		"cultivar" : "Sweet Pea",
+		"fTemp" : "warm",
+		"plantDepth" : "0.5",
+		"frstHardy" : null,
+		"hrsSunlight" : "8-12",
+		"inSpaced" : "6",
+		"dysToSprout" : "10",
+		"category_id" : 6,
+		"brand_id" : 3
+	},
+	{
+		"seedPacket_id" : 35,
+		"name" : "Flower",
+		"cultivar" : "Petunia",
+		"fTemp" : "70-75",
+		"plantDepth" : "0.0625",
+		"frstHardy" : "no",
+		"hrsSunlight" : "8-12",
+		"inSpaced" : "12",
+		"dysToSprout" : "10-14",
+		"category_id" : 6,
+		"brand_id" : 2
+	},
+	{
+		"seedPacket_id" : 36,
+		"name" : "Flower",
+		"cultivar" : "Zinnia",
+		"fTemp" : "warm",
+		"plantDepth" : "0.25",
+		"frstHardy" : "no",
+		"hrsSunlight" : "8-12",
+		"inSpaced" : "12",
+		"dysToSprout" : "10-14",
+		"category_id" : 6,
+		"brand_id" : 2
+	},
+	{
+		"seedPacket_id" : 37,
+		"name" : "Flower",
+		"cultivar" : "Aster China",
+		"fTemp" : "70-85",
+		"plantDepth" : "0.25",
+		"frstHardy" : "no",
+		"hrsSunlight" : "8-12",
+		"inSpaced" : "6-12",
+		"dysToSprout" : "10-14",
+		"category_id" : 6,
+		"brand_id" : 1
+	},
+	{
+		"seedPacket_id" : 38,
+		"name" : "Spinach",
+		"cultivar" : "Winter Bloom",
+		"fTemp" : "45-75",
+		"plantDepth" : "0.5",
+		"frstHardy" : "yes",
+		"hrsSunlight" : "8-12",
+		"inSpaced" : "6-12",
+		"dysToSprout" : "10-14",
+		"category_id" : 2,
+		"brand_id" : 5
 	},
 	{
 		"seedPacket_id" : 39,

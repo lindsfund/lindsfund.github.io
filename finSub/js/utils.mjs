@@ -56,3 +56,10 @@ export function showInDom(selector, data){
 export function setLocalStorage(key, data) {
     localStorage.setItem(key, JSON.stringify(data));
 }
+
+//function to filer array by category
+export function filterByCategory(array, _category){
+    
+    return array.filter((obj) => obj.category_id == _category);
+
+}
