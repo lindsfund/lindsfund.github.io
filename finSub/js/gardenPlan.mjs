@@ -17,13 +17,11 @@ const fallDisplay = document.getElementById('fallDisplay');
 function getPlantInfo(){
    // console.log(toPlant.value);
    // console.log(seedArr);
-    seedArr.find(element => {
-        //console.log(element.name);
-        let obj = {};
+   let obj = {};
+    seedArr.filter(element => {
         if(element.name === toPlant.value && element.frstHardy != null){
             console.log(element);
-            element.assign(obj);
-
+            element.push(obj);
         } else {
             console.log('no match');
         }
