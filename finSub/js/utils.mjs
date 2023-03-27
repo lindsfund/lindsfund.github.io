@@ -61,3 +61,30 @@ export function setLocalStorage(key, data) {
 export function filterByCategory(array, _category){ 
     return array.filter((obj) => obj.category_id == _category);
 }
+
+//custom alert function
+export function alertMessage(message, scroll=true){
+    //create element for alert
+    const errAlert = document.createElement('div');
+
+    //add class for styling
+    errAlert.classList.add('alert');
+    
+    //set contents of alert
+    errAlert.innerHTML = `<p>${message}</p><span>x</span>`;    
+
+    //add listener to close
+    errAlert.addEventListener('click', function(e){
+         //if x is clicked...close alert
+        if(e.target.tagName === 'SPAN'){
+            main.removeChild(this);
+        }
+    });
+
+    //render alert
+    const main = document.querySelector('main');
+    main.prepend(errAlert);
+
+    //scroll to top of page for user
+    if(scroll) window.scrollTo(0,0);
+}

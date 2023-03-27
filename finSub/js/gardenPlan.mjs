@@ -1,10 +1,11 @@
 import { returnSeedsJson } from "./fromJson.mjs";
-import { loadHeaderFooter } from "./utils.mjs";
+import { loadHeaderFooter, alertMessage } from "./utils.mjs";
 
 loadHeaderFooter();
 
 //get array of seeds from JSON
 const seedArr = await returnSeedsJson();
+console.log(seedArr);
        
 
 //set constants for event listeners 
@@ -14,35 +15,39 @@ const springDisplay = document.getElementById('springDisplay');
 const fallDisplay = document.getElementById('fallDisplay');
 
 
-function getPlantInfo(){
-   // console.log(toPlant.value);
-   // console.log(seedArr);
-   let obj = {};
-    seedArr.filter(element => {
-        if(element.name === toPlant.value && element.frstHardy != null){
-            console.log(element);
-            element.push(obj);
+async function isFrostTolerant(){
+    let plantName = await getPlantInfo();
+   console.log(plantName);
+    try{
+
+        if(plantName.frstHardy === 'no'){
+            let p = document.createElement('p');
+            springDisplay.append(plantName.name, p); 
+        } else if(plantName.frstHardy === 'yes') {
+            let p = document.createElement('p');
+            fallDisplay.append(plantName.name, p);
+            
         } else {
-            console.log('no match');
+            alertMessage('No Frost Data found.')
+        }
+    } catch (e) {
+
+        if(plantName === undefined){
+            alertMessage('no plant found in database');
         }
         
-        return obj;
-    });
-}
-
-function isFrostTolerant(){
-    let plantName = getPlantInfo();
-    console.log(plantName);
-   if(frstHardy === 'no'){
-    springDisplay.append(plantName); 
-    console.log(plantName);
-   } else {
-    let p = document.createElement('p');
-    fallDisplay.append(plantName, p);
+    }
     
-   }
 
 }
+
+function getPlantInfo(){
+   
+    const obj = seedArr.find(element => element.name === toPlant.value);
+    console.log(obj);
+       return obj;
+}
+
 
 
 growIt.addEventListener('click', isFrostTolerant);
