@@ -5,7 +5,7 @@ loadHeaderFooter();
 
 //get array of seeds from JSON
 const seedArr = await returnSeedsJson();
-console.log(seedArr);
+
        
 
 //set constants for event listeners 
@@ -17,7 +17,6 @@ const fallDisplay = document.getElementById('fallDisplay');
 
 async function isFrostTolerant(){
     let plantName = await getPlantInfo();
-   console.log(plantName);
     try{
 
         if(plantName.frstHardy === 'no'){
@@ -41,13 +40,9 @@ async function isFrostTolerant(){
 
 }
 
-function getPlantInfo(){
-   
+function getPlantInfo(){   
     const obj = seedArr.find(element => element.name === toPlant.value);
-    console.log(obj);
        return obj;
 }
-
-
 
 growIt.addEventListener('click', isFrostTolerant);

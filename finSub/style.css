@@ -69,9 +69,12 @@ button {
 #mainBody{
     display: grid;
     grid-template-columns: 1fr 1fr;
-   
     gap: 3em;
     padding: 3em;
+    justify-content: center;
+    max-width: 1000px;
+    margin:auto;
+    
 }
 
 /*---------- FORMS DEFUALT -----------*/
@@ -102,10 +105,19 @@ label {
 
 input {
     width: 100%;
-    border: 2px solid var(--text-default);
+    border: 1px solid var(--text-default);
     border-radius: 5px;
     max-width: 300px;
+    padding:3px;
+    margin-bottom: .5rem;
+    margin-top: .5rem;
+    
 }
+legend {
+    font-family: var(--font-headline);
+    
+}
+
 
 /*----------HEADER----------*/
 #mainHeader {
@@ -146,6 +158,7 @@ input {
     display: grid;
     grid-template-columns: 2fr 1fr 2fr;
     gap: 1em;
+    margin: 1rem auto;
 }
 
 .footPanel div {
@@ -178,6 +191,7 @@ img {
 
 .qtrSecElem {
     border: 2px solid black;
+    border-radius: 5px;
     /* background-color: yellow; */
     text-align: center;   
 }
@@ -195,15 +209,20 @@ img {
 }
 
 .fullWdthElem {
+    display:grid;
     border: 2px solid black;
-    /* background-color: magenta; */
+    border-radius: 5px;
     text-align: center;
+    justify-content: center;
+    padding:2px;
+
 }
 
 .seedCardsContainer {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
     grid-column-end: span 2;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
+   
     gap: 1rem;
     
 }
@@ -212,8 +231,7 @@ img {
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     border: 2px solid black;
-    max-width: 250px;
-    min-width: 100px;
+    width: 225px;
     text-align: center;
 }
 .seedCardElem h3 {
@@ -238,4 +256,29 @@ img {
 .alert p {
     margin:0;
 }
+
+/* One offs */
+#growIt {
+    background-color: var(--green-color);
+    font-family: var(--font-headline);
+    font-size: 1.2rem;
+    padding:1rem;
+    margin:.5rem;
+    border-radius: 5px;;
+}
+
+#gardenPlanInput {
+    margin:auto;
+}
+
+#seedInput button {
+    background-color: var(--blue-color);
+    font-family: var(--font-headline);
+    font-size: 1.2rem;
+    padding:1rem;
+    margin:.5rem;
+    border-radius: 5px;;
+}
+
+
 

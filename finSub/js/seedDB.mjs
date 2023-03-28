@@ -20,6 +20,7 @@ const seedArr = await returnSeedsJson();
 //eventListener for category drop down
 let changedText = document.getElementById('changed');
 
+
 //do this when there is a change
 function selectCategory(){
     changedText.textContent = this.value;
@@ -30,6 +31,12 @@ function selectCategory(){
 
     //are there seeds in this category
     if(categoryArr != ''){
+        //set display to empty
+        const element = document.querySelector('.seedCardsContainer');
+        while (element.hasChildNodes()) {
+            element.removeChild(element.firstChild);
+        }
+        
         //display selected category's seeds 
         categoryArr.forEach((obj) => {
             showInDom('.seedCardsContainer', displaySeed(obj));           
@@ -45,6 +52,6 @@ function selectCategory(){
 
 document.getElementById('category').onchange = selectCategory;
 
-//when card is clicked send it to localStorage for processing into the garden plan
+
 
 
