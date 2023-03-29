@@ -7,7 +7,7 @@ function displaySeed(seed){
     return `<div class="seedCardElem">
     <h3>Seed Type: <br> <span>${seed.name}</span></h3>
     <p>Cultivar: ${seed.cultivar}</p>
-    <p>seed Id: ${seed.seedPacket_id}</p>
+    <p>Seed Id: ${seed.seedPacket_id}</p>
     <p>Brand Id:${seed.brand_id}</p>
     
     <!-- plantedbefore? -->
