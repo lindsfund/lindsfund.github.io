@@ -15,6 +15,7 @@ const springDisplay = document.getElementById('springDisplay');
 const fallDisplay = document.getElementById('fallDisplay');
 
 
+
 async function isFrostTolerant(){
     let plantName = await getPlantInfo();
     try{
@@ -41,7 +42,9 @@ async function isFrostTolerant(){
 }
 
 function getPlantInfo(){   
-    const obj = seedArr.find(element => element.name === toPlant.value);
+    const str = toPlant.value;
+    const strCap = str.charAt(0).toUpperCase() + str.slice(1); 
+    const obj = seedArr.find(element => element.name === strCap);
        return obj;
 }
 

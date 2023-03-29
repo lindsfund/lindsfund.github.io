@@ -88,3 +88,5 @@ export function alertMessage(message, scroll=true){
     //scroll to top of page for user
     if(scroll) window.scrollTo(0,0);
 }
+
+//capitalize the first letter of a string
